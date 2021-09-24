@@ -161,7 +161,7 @@ def generate_barcodes():
         mergeFile.write(fp)
         blob.upload_from_string(fp.getvalue(), content_type="application/pdf")
 
-        return """<a href="/download_codes">Télécharger codes-barres (pdf à imprimer)</a>"""
+        return render_template('data.html')
 
 
 @app.route('/download_codes', methods=['GET', 'POST'])
